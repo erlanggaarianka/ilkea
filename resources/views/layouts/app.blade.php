@@ -32,10 +32,10 @@
                     <ul class="navbar-nav me-auto">
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/catalogue') }}">Catalogue</a>
+                                <a class="nav-link" href="{{ route('catalogue') }}">Catalogue</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/about-us') }}">About Us</a>
+                                <a class="nav-link" href="{{ route('about-us') }}">About Us</a>
                             </li>
                         @endauth
                     </ul>

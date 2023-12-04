@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    {{-- Get the About Us --}}
+    {{-- Create Cards For the Furnitures --}}
     Memek
 </div>
 @endsection
