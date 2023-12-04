@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Furniture;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,11 +27,22 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function showFurnitureCreate()
+    {
+        return view('furniture-create');
+    }
+
     public function catalogue(){
-        return view('catalogue');
+        $furnitures = Furniture::all();
+        return view('catalogue', compact('furnitures'));
     }
 
     public function aboutUs(){
         return view('about-us');
+    }
+
+    public function showFurniture($id){
+        $furniture = Furniture::findOrFail($id);
+        return view('furniture', compact('furniture'));
     }
 }
